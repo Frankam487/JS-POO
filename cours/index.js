@@ -59,17 +59,72 @@ newObj.adresse = "tougang";
 
 //1)->fONSTION CONSTRUCTEUR
 
-function User(pseudo, ville){
-    this.pseudo;
-    this.ville;
-
-    this.getCity = function(){
-        console.log(this.pseudo + "Habite a " + this.ville);
+function User(pseudo, ville, age, sex){
+    this.pseudo = pseudo;
+    this.ville = ville;
+    this.age = age;
+    this.sex = sex;
+    this.getCity = function () {
+        console.log(`${this.pseudo} Habite a ${this.ville}`);
+    }
+    this.getGender = function () {
+      console.log(`je m'appelle ${this.pseudo}, je suis de sexe ${this.sex} et j'ai ${this.age} ans`);
     }
 }
 const newObject = Object.apply(obj);
-console.log(newObject);
+// console.log(newObject);
 const user1 = new User('frank', 'bafoussam');
+const user3 = new User("Fany", "Douala", 22, "feminin");
+console.log(user3.getGender());
+// console.log(user1);
 const user2 = new User('franko', 'ynde');
-// console.log(user2);
-// -------------------------------------------------RAS--------------------
+// console.log(user2.getCity());
+//-------------------------
+//Factory functions
+
+function User4(pseudo, ville) {
+  return {
+    pseudo: pseudo, 
+    ville: ville
+  }
+}
+const user5 = User4('frank', 'nice');
+
+// console.log(user5);
+
+//--------------------
+//class
+
+class Utilisateur {
+  constructor(pseudo, ville){
+    this.pseudo = pseudo;
+    this.ville = ville;
+  }
+  sayName = function (){
+    console.log(`bjr je suis ${this.pseudo}`);
+  }
+}
+const userr = new Utilisateur('Samia', 'Lyon');
+// console.log(userr);
+
+// -----------
+// heritage
+
+class Animal {
+  constructor (name, age){
+    this.name = name;
+    this.age = age;
+  }
+  saySomething(text){
+    console.log(`${this.name} dit ${text}`);
+  }
+}
+class Dog extends Animal {
+  cour(){
+    console.log(":e chien cour");
+  }
+}
+
+const loulou = new Dog("loulou", 5);
+
+console.log(loulou);
