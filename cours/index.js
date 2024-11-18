@@ -2,7 +2,7 @@ const obj = {
     pseudo: "Frank",
     ville: "Bafoussam",
     admin: false, 
-
+ 
     direBonjour : function(){
 
             console.log("Bonjour je suis " + this.pseudo);
