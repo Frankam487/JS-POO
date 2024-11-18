@@ -3,12 +3,13 @@ const obj = {
     ville: "Bafoussam",
     admin: false, 
  
-    direBonjour : function(){
+    // direBonjour : function(){
 
-            console.log("Bonjour je suis " + this.pseudo);
-    }
-    // direBonjour() {
+    //         console.log("Bonjour je suis " + this.pseudo);
     // }
+    direBonjour: function(){
+      console.log(`Salut je suis ${this.pseudo} et jai ${this.age} ans` );
+    }
 }
 
 //ajouter un nouvelle objet
