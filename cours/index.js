@@ -67,7 +67,9 @@ function User(pseudo, ville){
         console.log(this.pseudo + "Habite a " + this.ville);
     }
 }
-
+const newObject = Object.apply(obj);
+console.log(newObject);
 const user1 = new User('frank', 'bafoussam');
 const user2 = new User('franko', 'ynde');
-console.log(user2);
+// console.log(user2);
+// -------------------------------------------------RAS--------------------
