@@ -10,6 +10,7 @@ const obj = {
     // direBonjour() {
     // }
 }
+
 //ajouter un nouvelle objet
 obj.age = 23;
 //supprimer un nouvel object
